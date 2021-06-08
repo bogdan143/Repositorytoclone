@@ -1,0 +1,10 @@
+stage('Clone repository') {
+    node('master') {
+        git branch: 'main', url: 'https://github.com/bogdan143/Repositorytoclone.git'
+    }
+}
+stage('Print content') {
+    node('master') {
+    sh 'cat clone2.md'
+}
+}
